@@ -17,28 +17,19 @@ public class Main {
 
         int[][] table = new int[n][n];
         int i, j;
-
         for (i = 0; i < table.length; i++) {
             for (j = 0; j < table.length; j++) {
-                table[i][j]=(i + 1) * (j + 1);
-                System.out.print(" " + (i + 1) * (j + 1) + " ");
+                table[i][j] = (i + 1) * (j + 1);
+                System.out.print(" " + table[i][j] + " ");
             }
             System.out.println("\n");
         }
         int count = 0;
-        for (int [] mus: table) {
-            for (int x: mus) {
-                if (x == k) count += 1;
+        for (int[] mus : table) {
+            for (int x : mus) {
+                if (x == k) count ++;
             }
         }
         System.out.println(count);
-
     }
-
 }
-
-
-
-//  for ( k = 0; k < table.length; k++)
-//                count += k;
-//            System.out.println(count);
